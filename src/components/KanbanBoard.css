@@ -1,15 +1,84 @@
 /* KanbanBoard.css */
 
 /* Styles for the main container of the Kanban board */
-.kanban-board-container {
+.kanban-board {
     display: flex;
     flex-direction: column;
-    /* Add more styles for the board container */
+    align-items: center;
+    font-family: 'Arial', sans-serif;
   }
   
-  /* Styles for options, buttons, or other UI elements within the Kanban board */
-  .options {
-    margin-bottom: 20px;
-    /* Add styles for options, buttons, etc. */
+  /* Styles for the columns container */
+  .columns-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
   }
+  
+  /* Styles for individual columns */
+  .column {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Styles for CardList */
+  .card-list-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for Card */
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .card h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .card p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Styles for options */
+  .options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for dropdowns */
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Icon styles */
+  .icon {
+    width: 24px;
+    height: 24px;
+    fill: #555;
+  }
+  
+  /* Additional styles or modifications can be made as per your design preferences */
   
