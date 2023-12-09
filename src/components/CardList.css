@@ -1,19 +1,13 @@
-/* CardList.css */
-
-/* Styles for the container of the card list */
 .card-list-container {
     display: flex;
     flex-direction: column;
-    /* Add more styles as needed */
   }
   
-  /* Styles for individual cards within the list */
   .card {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 10px;
-    /* Add more styles for card appearance */
   }
   

@@ -1,12 +1,11 @@
-// CardList.js
 import React from 'react';
-import Card from './Card'; // Import the Card component
-import './CardList.css'; // Import the associated CSS file for styling
+import Card from './Card'; 
+import './CardList.css'; 
 
 const CardList = ({ title, cards }) => {
   if (!Array.isArray(cards)) {
     console.error('cards is not an array:', cards);
-    return null; // Or handle the non-array case as needed
+    return null; 
   }
 
   return (

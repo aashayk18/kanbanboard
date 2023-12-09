@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CardList from './CardList'; // Import the CardList component
-import './KanbanBoard.css'; // Import associated CSS file for styling
+import CardList from './CardList'; 
+import './KanbanBoard.css'; 
 
 const KanbanBoard = () => {
   const [groupingOption, setGroupingOption] = useState('status');
@@ -12,7 +12,7 @@ const KanbanBoard = () => {
       try {
         const response = await fetch('https://api.quicksell.co/v1/internal/frontend-assignment');
         const data = await response.json();
-        // Assuming the API response returns an object with 'tickets' array
+        
         setTickets(data.tickets || []);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -26,7 +26,7 @@ const KanbanBoard = () => {
     let organizedTickets = [...tickets];
 
     if (groupingOption === 'status') {
-      // Group by status logic
+      
       const statusGroups = {};
       organizedTickets.forEach(ticket => {
         if (!statusGroups[ticket.status]) {
@@ -34,11 +34,10 @@ const KanbanBoard = () => {
         }
         statusGroups[ticket.status].push(ticket);
       });
-
-      // Convert object back to array
+      
       organizedTickets = Object.values(statusGroups).flat();
     } else if (groupingOption === 'user') {
-      // Group by user logic
+      
       const userGroups = {};
       organizedTickets.forEach(ticket => {
         if (!userGroups[ticket.userId]) {
@@ -47,14 +46,12 @@ const KanbanBoard = () => {
         userGroups[ticket.userId].push(ticket);
       });
 
-      // Convert object back to array
       organizedTickets = Object.values(userGroups).flat();
     } else if (groupingOption === 'priority') {
-      // Group by priority logic
+      
       organizedTickets.sort((a, b) => b.priority - a.priority);
     }
 
-    // Sorting based on 'sortBy'
     if (sortBy === 'priority') {
       organizedTickets.sort((a, b) => b.priority - a.priority);
     } else if (sortBy === 'title') {
@@ -63,7 +60,6 @@ const KanbanBoard = () => {
 
     setTickets(organizedTickets);
   };
-
 
   useEffect(() => {
     groupAndSortTickets();

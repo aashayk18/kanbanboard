@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css'; // Import the CSS file for styling
+import './Card.css'; 
 
 const Card = ({ id, title, tag, userId, status, priority }) => {
   return (
@@ -10,7 +10,6 @@ const Card = ({ id, title, tag, userId, status, priority }) => {
       <p className="info">User ID: {userId}</p>
       <p className="info">Status: {status}</p>
       <p className="info">Priority: {priority}</p>
-      {/* Render other ticket details */}
     </div>
   );
 };

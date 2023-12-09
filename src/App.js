@@ -1,5 +1,5 @@
 import React from 'react';
-import KanbanBoard from './components/KanbanBoard'; // Path to your KanbanBoard component
+import KanbanBoard from './components/KanbanBoard'; 
 
 const App = () => {
   return (
