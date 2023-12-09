@@ -3,8 +3,8 @@ import CardList from './CardList';
 import './KanbanBoard.css';
 
 const KanbanBoard = () => {
-    const [groupingOption, setGroupingOption] = useState('status');
-    const [sortBy, setSortBy] = useState('priority');
+    const [groupingOption, setGroupingOption] = useState(localStorage.getItem('groupingOption') || 'status');
+    const [sortBy, setSortBy] = useState(localStorage.getItem('sortBy') || 'priority');
     const [tickets, setTickets] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
 
@@ -24,6 +24,11 @@ const KanbanBoard = () => {
 
     const toggleOptions = () => {
         setShowOptions(!showOptions);
+    };
+
+    const saveState = () => {
+        localStorage.setItem('groupingOption', groupingOption);
+        localStorage.setItem('sortBy', sortBy);
     };
 
     const renderOptions = () => {
@@ -80,6 +85,7 @@ const KanbanBoard = () => {
 
     useEffect(() => {
         groupAndSortTickets();
+        saveState();
     }, [groupingOption, sortBy]);
 
     const renderColumnsByGroup = () => {
