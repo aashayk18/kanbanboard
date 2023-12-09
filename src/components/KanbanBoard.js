@@ -1,4 +1,3 @@
-// KanbanBoard.js
 import React, { useState, useEffect } from 'react';
 import CardList from './CardList'; // Import the CardList component
 import './KanbanBoard.css'; // Import associated CSS file for styling
