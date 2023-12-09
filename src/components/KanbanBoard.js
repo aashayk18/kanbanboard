@@ -102,7 +102,7 @@ const KanbanBoard = () => {
 
             columns = Object.entries(statusGroups).map(([status, cards]) => (
                 <div key={status} className="column">
-                    <h3>{status}</h3>
+                    <h3>{status} ({cards.length})</h3>
                     <CardList cards={cards} />
                 </div>
             ));
@@ -117,7 +117,7 @@ const KanbanBoard = () => {
 
             columns = Object.entries(userGroups).map(([userId, cards]) => (
                 <div key={userId} className="column">
-                    <h3>User {userId}</h3>
+                    <h3>User {userId} ({cards.length})</h3>
                     <CardList cards={cards} />
                 </div>
             ));
@@ -129,7 +129,7 @@ const KanbanBoard = () => {
                 if (priorityCards.length > 0) {
                     columns.push(
                         <div key={priorityLevel} className="column">
-                            <h3>{priorityLevel}</h3>
+                            <h3>{priorityLevel} ({priorityCards.length})</h3>
                             <CardList cards={priorityCards} />
                         </div>
                     );
