@@ -142,12 +142,13 @@ const KanbanBoard = () => {
 
     return (
         <div className="kanban-board">
-            
+
+            <div className="header-section">
                 <div className="dropdown">
                     <button className="dropdown-button" onClick={() => setShowOptions(!showOptions)}>
                         <div>
-                            <i className="fas fa-filter"></i> 
-                            Display 
+                            <i className="fas fa-filter"></i>
+                            Display
                         </div>
                     </button>
                     {showOptions && (
@@ -170,15 +171,17 @@ const KanbanBoard = () => {
                         </div>
                     )}
                 </div>
-            
-    
-            <div className="columns-container">
-                {renderColumnsByGroup()}
+            </div>
+
+            <div className="main-section">
+                <div className="columns-container">
+                    {renderColumnsByGroup()}
+                </div>
             </div>
         </div>
     );
-        
-    
+
+
 };
 
 export default KanbanBoard;

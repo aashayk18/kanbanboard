@@ -1,5 +1,5 @@
 body {
-    margin: 20px;
+    margin: 10px;
     font-family: 'Arial', sans-serif;
     background-color: #f2f2f2;
 }
@@ -75,8 +75,8 @@ select {
 
 .dropdown {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -130,4 +130,19 @@ label {
 
 .filter-icon {
     margin-right: 5px;
+}
+
+.header-section {
+    background-color: #fff;
+    margin-top: -10px;
+    margin-bottom: -40px;
+    width: 100%;
+    padding: 10px;
+    height: 60px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
