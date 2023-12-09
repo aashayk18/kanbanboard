@@ -136,12 +136,12 @@ const KanbanBoard = () => {
 
     return (
         <div className="kanban-board">
-            <div className="top-section">
+            
                 <div className="dropdown">
                     <button className="dropdown-button" onClick={() => setShowOptions(!showOptions)}>
                         <div>
-                            <i className="fas fa-filter"></i> {/* Filter icon */}
-                            Display <i className="fas fa-chevron-down"></i> {/* Dropdown arrow */}
+                            <i className="fas fa-filter"></i> 
+                            Display 
                         </div>
                     </button>
                     {showOptions && (
@@ -164,7 +164,7 @@ const KanbanBoard = () => {
                         </div>
                     )}
                 </div>
-            </div>
+            
     
             <div className="columns-container">
                 {renderColumnsByGroup()}

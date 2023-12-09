@@ -4,16 +4,35 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 16px;
     margin-bottom: 16px;
-  }
-  
-  .title {
+}
+
+.id {
+    color: #f2f2f2;
+}
+
+.title {
     font-size: 1.2rem;
     margin-bottom: 8px;
-  }
-  
-  .info {
+}
+
+.info {
     margin-bottom: 4px;
     font-size: 0.9rem;
     color: #555;
+}
+
+.ellipsis {
+    position: relative;
+    left: 5px;
+    bottom: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
   }
   
+  .variables {
+    display: none;
+  }
+  
+  .variables.show {
+    display: block;
+  }
