@@ -1,0 +1,15 @@
+/* KanbanBoard.css */
+
+/* Styles for the main container of the Kanban board */
+.kanban-board-container {
+    display: flex;
+    flex-direction: column;
+    /* Add more styles for the board container */
+  }
+  
+  /* Styles for options, buttons, or other UI elements within the Kanban board */
+  .options {
+    margin-bottom: 20px;
+    /* Add styles for options, buttons, etc. */
+  }
+  
