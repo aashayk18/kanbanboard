@@ -2,8 +2,12 @@
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin-bottom: 16px;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px; 
+    min-height: 100px; 
+    width: auto; 
+    height: auto; 
 }
 
 .id {
