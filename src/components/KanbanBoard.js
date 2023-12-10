@@ -173,7 +173,7 @@ const KanbanBoard = () => {
                     {showOptions && (
                         <div className="dropdown-content">
                             <div className="dropdown-options">
-                                <label htmlFor="grouping">Grouping:</label>
+                                <label htmlFor="grouping">Grouping</label>
                                 <select id="grouping" value={groupingOption} onChange={(e) => setGroupingOption(e.target.value)}>
                                     <option value="status">Status</option>
                                     <option value="user">User</option>
@@ -181,7 +181,7 @@ const KanbanBoard = () => {
                                 </select>
                             </div>
                             <div className="dropdown-options">
-                                <label htmlFor="ordering">Ordering:</label>
+                                <label htmlFor="ordering">Ordering</label>
                                 <select id="ordering" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
                                     <option value="priority">Priority</option>
                                     <option value="title">Title</option>
