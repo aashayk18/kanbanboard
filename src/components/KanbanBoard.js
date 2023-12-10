@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import CardList from './CardList';
 import './KanbanBoard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 const KanbanBoard = () => {
     const [groupingOption, setGroupingOption] = useState(localStorage.getItem('groupingOption') || 'status');
@@ -123,7 +125,24 @@ const KanbanBoard = () => {
             ));
         } else if (groupingOption === 'priority') {
             for (let i = 4; i >= 0; i--) {
-                const priorityLevel = i === 0 ? 'No Priority' : `Priority ${i}`;
+                let priorityLevel;
+                switch (i) {
+                    case 0:
+                        priorityLevel = "No Priority"
+                        break
+                    case 1:
+                        priorityLevel = "Low"
+                        break
+                    case 2:
+                        priorityLevel = "Medium"
+                        break
+                    case 3:
+                        priorityLevel = "High"
+                        break
+                    case 4:
+                        priorityLevel = "Urgent"
+                        break
+                }
                 const priorityCards = tickets.filter(ticket => ticket.priority === i);
 
                 if (priorityCards.length > 0) {
@@ -147,8 +166,8 @@ const KanbanBoard = () => {
                 <div className="dropdown">
                     <button className="dropdown-button" onClick={() => setShowOptions(!showOptions)}>
                         <div>
-                            <i className="fas fa-filter"></i>
                             Display
+                            <FontAwesomeIcon icon={faAngleDown} />
                         </div>
                     </button>
                     {showOptions && (

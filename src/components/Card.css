@@ -8,12 +8,15 @@
 
 .id {
     color: #a8a8a8;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 8px;
     color: black;
+    font-weight: bold;
 }
 
 .info {
